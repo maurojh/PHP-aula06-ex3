@@ -1,4 +1,3 @@
-"# PHP-aula06-ex3" 
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -236,29 +235,29 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org09217b1">1. Conex„o com banco de dados</a>
+<li><a href="#org09217b1">1. Conex√£o com banco de dados</a>
 <ul>
-<li><a href="#orgc5d5dd0">1.1. Abrindo a conex„o</a></li>
-<li><a href="#org53875fb">1.2. Fechar a conex„o</a></li>
-<li><a href="#orgc677e65">1.3. ExercÌcio 1</a></li>
+<li><a href="#orgc5d5dd0">1.1. Abrindo a conex√£o</a></li>
+<li><a href="#org53875fb">1.2. Fechar a conex√£o</a></li>
+<li><a href="#orgc677e65">1.3. Exerc√≠cio 1</a></li>
 <li><a href="#orgee21835">1.4. Criando banco de dados MySQL</a></li>
-<li><a href="#org31e1f43">1.5. ExercÌcio 2</a></li>
+<li><a href="#org31e1f43">1.5. Exerc√≠cio 2</a></li>
 <li><a href="#org478d2fa">1.6. Criando tabelas</a></li>
-<li><a href="#orgd932e81">1.7. ExercÌcio 3</a></li>
+<li><a href="#orgd932e81">1.7. Exerc√≠cio 3</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div id="outline-container-org09217b1" class="outline-2">
-<h2 id="org09217b1"><span class="section-number-2">1</span> Conex„o com banco de dados</h2>
+<h2 id="org09217b1"><span class="section-number-2">1</span> Conex√£o com banco de dados</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-PHP possui trÍs formas de trabalhar com MySQL:
+PHP possui tr√™s formas de trabalhar com MySQL:
 </p>
 
 <ul class="org-ul">
-<li>MySQLi (orientado ‡ objeto)</li>
+<li>MySQLi (orientado √† objeto)</li>
 <li>MySQLi (procedural)</li>
 <li>PDO</li>
 </ul>
@@ -273,10 +272,10 @@ MySQLi trabalha apenas com banco de dados MySQL.
 </div>
 
 <div id="outline-container-orgc5d5dd0" class="outline-3">
-<h3 id="orgc5d5dd0"><span class="section-number-3">1.1</span> Abrindo a conex„o</h3>
+<h3 id="orgc5d5dd0"><span class="section-number-3">1.1</span> Abrindo a conex√£o</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-Antes de acessar os dados em um banco de dados MySQL, vocÍ precisa se conectar ao servidor:
+Antes de acessar os dados em um banco de dados MySQL, voc√™ precisa se conectar ao servidor:
 </p>
 
 <pre class="example">
@@ -286,25 +285,25 @@ $servidor = "localhost";
 $usuario = "root";
 $senha = "toor";
 
-// Cria a conex„o:
+// Cria a conex√£o:
 $conexao = mysqli_connect($servidor, $usuario, $senha);
 
-// Verifica a conex„o
+// Verifica a conex√£o
 if( $conexao == false ) {
-   die("A conex„o falhou: " . mysqli_connect_error());
+   die("A conex√£o falhou: " . mysqli_connect_error());
 }
 
-echo "Conex„o realizada com sucesso!";
+echo "Conex√£o realizada com sucesso!";
 ?&gt;
 </pre>
 </div>
 </div>
 
 <div id="outline-container-org53875fb" class="outline-3">
-<h3 id="org53875fb"><span class="section-number-3">1.2</span> Fechar a conex„o</h3>
+<h3 id="org53875fb"><span class="section-number-3">1.2</span> Fechar a conex√£o</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-Quando o script termina a conex„o com o banco de dados È fechada automaticamente. Mas podemos fech·-la antes:
+Quando o script termina a conex√£o com o banco de dados √© fechada automaticamente. Mas podemos fech√°-la antes:
 </p>
 
 <pre class="example">
@@ -314,10 +313,10 @@ mysqli_close($conexao);
 </div>
 
 <div id="outline-container-orgc677e65" class="outline-3">
-<h3 id="orgc677e65"><span class="section-number-3">1.3</span> ExercÌcio 1</h3>
+<h3 id="orgc677e65"><span class="section-number-3">1.3</span> Exerc√≠cio 1</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
-Crie uma p·gina php chamada (teste.php) que verifica se a conex„o com o servidor de banco de dados est· sendo feita corretamente.
+Crie uma p√°gina php chamada (teste.php) que verifica se a conex√£o com o servidor de banco de dados est√° sendo feita corretamente.
 </p>
 </div>
 </div>
@@ -326,11 +325,11 @@ Crie uma p·gina php chamada (teste.php) que verifica se a conex„o com o servidor
 <h3 id="orgee21835"><span class="section-number-3">1.4</span> Criando banco de dados MySQL</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
-Um banco de dados È composto de v·rias tabelas.
+Um banco de dados √© composto de v√°rias tabelas.
 </p>
 
 <p>
-Para criar o banco em PHP vocÍ efetua uma consulta (query) com o comando de criaÁ„o:
+Para criar o banco em PHP voc√™ efetua uma consulta (query) com o comando de cria√ß√£o:
 </p>
 
 <pre class="example">
@@ -338,13 +337,13 @@ mysqli_query($conexao, "CREATE DATABASE banco");
 </pre>
 
 <p>
-A p·gina completa deve:
+A p√°gina completa deve:
 </p>
 
 <ul class="org-ul">
-<li>criar a conex„o com o servidor de banco de dados</li>
+<li>criar a conex√£o com o servidor de banco de dados</li>
 <li>efetuar a consulta</li>
-<li>fechar a conex„o</li>
+<li>fechar a conex√£o</li>
 </ul>
 
 <pre class="example">
@@ -354,22 +353,22 @@ $servidor = "localhost";
 $usuario = "root";
 $senha = "toor";
 
-// Cria a conex„o:
+// Cria a conex√£o:
 $conexao = mysqli_connect($servidor, $usuario, $senha);
 
-// Verifica a conex„o
+// Verifica a conex√£o
 if( $conexao == false ) {
-   die("A conex„o falhou: " . mysqli_connect_error());
+   die("A conex√£o falhou: " . mysqli_connect_error());
 }
 
-echo "Conex„o realizada com sucesso!&lt;br&gt;";
+echo "Conex√£o realizada com sucesso!&lt;br&gt;";
 
 // Cria o banco de dados
 $sql = "CREATE DATABASE bdEscola";
 if (mysqli_query($conexao, $sql)) {
     echo "Banco de dados criado com sucesso!&lt;br&gt;";
 } else {
-    echo "Erro na criaÁ„o do banco de dados: " . mysqli_error($conexao);
+    echo "Erro na cria√ß√£o do banco de dados: " . mysqli_error($conexao);
 }
 
 mysqli_close($conexao);
@@ -379,10 +378,10 @@ mysqli_close($conexao);
 </div>
 
 <div id="outline-container-org31e1f43" class="outline-3">
-<h3 id="org31e1f43"><span class="section-number-3">1.5</span> ExercÌcio 2</h3>
+<h3 id="org31e1f43"><span class="section-number-3">1.5</span> Exerc√≠cio 2</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
-Escreva uma p·gina em php (cria.php) que cria um banco de dados chamado: bdLoja.
+Escreva uma p√°gina em php (cria.php) que cria um banco de dados chamado: bdLoja.
 </p>
 </div>
 </div>
@@ -395,7 +394,7 @@ Uma tabela de banco de dados possui dados dispostos em linhas e colunas.
 </p>
 
 <p>
-O comando <b>CREATE TABLE</b> È usado para criar uma tabela em MySQL.
+O comando <b>CREATE TABLE</b> √© usado para criar uma tabela em MySQL.
 </p>
 
 <p>
@@ -453,19 +452,19 @@ A tabela poderia armazenar os seguintes dados:
 </table>
 
 <p>
-O campo id "id INT(6) UNSIGNED AUTO<sub>INCREMENT</sub> PRIMARY KEY" armazenar· valores inteiros, comeÁando em 1, os valores n„o ser„o fornecidos, o prÛximo valor ser· gerado automaticamente (AUTO<sub>INCREMENT</sub>).
+O campo id "id INT(6) UNSIGNED AUTO<sub>INCREMENT</sub> PRIMARY KEY" armazenar√° valores inteiros, come√ßando em 1, os valores n√£o ser√£o fornecidos, o pr√≥ximo valor ser√° gerado automaticamente (AUTO<sub>INCREMENT</sub>).
 </p>
 
 <p>
-O campo nome "nome VARCHAR(40) NOT NULL" poder· armazenar strings de atÈ 40 caracteres, È obrigatÛrio fornecer um valor para este campo (NOT NULL).
+O campo nome "nome VARCHAR(40) NOT NULL" poder√° armazenar strings de at√© 40 caracteres, √© obrigat√≥rio fornecer um valor para este campo (NOT NULL).
 </p>
 
 <p>
-O campo nota "nota VARCHAR(5)" poder· armazenar strings de atÈ 5 caracteres, como ele guardar· notas, os valores ser„o armazenados de 0.00 atÈ 10.00.
+O campo nota "nota VARCHAR(5)" poder√° armazenar strings de at√© 5 caracteres, como ele guardar√° notas, os valores ser√£o armazenados de 0.00 at√© 10.00.
 </p>
 
 <p>
-A p·gina que cria a tabela È parecida com a que cria banco de dados, mas agora devemos fornecer o banco no momento da criaÁ„o da conex„o. Assim a tabela È criada no banco fornecido.
+A p√°gina que cria a tabela √© parecida com a que cria banco de dados, mas agora devemos fornecer o banco no momento da cria√ß√£o da conex√£o. Assim a tabela √© criada no banco fornecido.
 </p>
 
 <pre class="example">
@@ -476,15 +475,15 @@ $usuario = "root";
 $senha = "toor";
 $banco = "bdEscola"; // novo campo
 
-// Cria a conex„o:
+// Cria a conex√£o:
 $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
-// Verifica a conex„o
+// Verifica a conex√£o
 if( $conexao == false ) {
-   die("A conex„o falhou: " . mysqli_connect_error());
+   die("A conex√£o falhou: " . mysqli_connect_error());
 }
 
-echo "Conex„o realizada com sucesso!&lt;br&gt;";
+echo "Conex√£o realizada com sucesso!&lt;br&gt;";
 
 // Cria a tabela
 $sql = "CREATE TABLE alunos (
@@ -496,7 +495,7 @@ $sql = "CREATE TABLE alunos (
 if (mysqli_query($conexao, $sql)) {
     echo "Tabela criada com sucesso!&lt;br&gt;";
 } else {
-    echo "Erro na criaÁ„o da tabela: " . mysqli_error($conexao);
+    echo "Erro na cria√ß√£o da tabela: " . mysqli_error($conexao);
 }
 
 mysqli_close($conexao);
@@ -506,10 +505,10 @@ mysqli_close($conexao);
 </div>
 
 <div id="outline-container-orgd932e81" class="outline-3">
-<h3 id="orgd932e81"><span class="section-number-3">1.7</span> ExercÌcio 3</h3>
+<h3 id="orgd932e81"><span class="section-number-3">1.7</span> Exerc√≠cio 3</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
-Escreva uma p·gina php que cria a tabela <b>clientes</b> no banco <b>bdLoja</b>. A tabela deve poder armazenar os dados:
+Escreva uma p√°gina php que cria a tabela <b>clientes</b> no banco <b>bdLoja</b>. A tabela deve poder armazenar os dados:
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
