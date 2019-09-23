@@ -1,18 +1,15 @@
-"# PHP-aula06-ex3" 
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-23 seg 19:05 -->
+<!-- 2019-09-23 seg 20:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
 <meta name="generator" content="Org mode" />
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
 <style type="text/css">
-  <!--/*--><![CDATA[/*><!--*/
-  body { font-family: 'Noto Sans', sans-serif; }
+ <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -180,7 +177,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-   pre, code   body { font-family: 'Noto Sans', sans-serif; }
   /*]]>*/-->
 </style>
 <script type="text/javascript">
@@ -236,22 +232,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org09217b1">1. Conexão com banco de dados</a>
+<li><a href="#org5113da5">1. Conexão com banco de dados</a>
 <ul>
-<li><a href="#orgc5d5dd0">1.1. Abrindo a conexão</a></li>
-<li><a href="#org53875fb">1.2. Fechar a conexão</a></li>
-<li><a href="#orgc677e65">1.3. Exercício 1</a></li>
-<li><a href="#orgee21835">1.4. Criando banco de dados MySQL</a></li>
-<li><a href="#org31e1f43">1.5. Exercício 2</a></li>
-<li><a href="#org478d2fa">1.6. Criando tabelas</a></li>
-<li><a href="#orgd932e81">1.7. Exercício 3</a></li>
+<li><a href="#orgf64ccd5">1.1. Abrindo a conexão</a></li>
+<li><a href="#orgc91d834">1.2. Fechar a conexão</a></li>
+<li><a href="#orgcf354a6">1.3. Exercício 1</a></li>
+<li><a href="#orgc5886cd">1.4. Criando banco de dados MySQL</a></li>
+<li><a href="#org95eb959">1.5. Exercício 2</a></li>
+<li><a href="#org6325285">1.6. Criando tabelas</a></li>
+<li><a href="#orgeaa61e8">1.7. Exercício 3</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org09217b1" class="outline-2">
-<h2 id="org09217b1"><span class="section-number-2">1</span> Conexão com banco de dados</h2>
+
+<div id="outline-container-org5113da5" class="outline-2">
+<h2 id="org5113da5"><span class="section-number-2">1</span> Conexão com banco de dados</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 PHP possui três formas de trabalhar com MySQL:
@@ -272,8 +269,8 @@ MySQLi trabalha apenas com banco de dados MySQL.
 </p>
 </div>
 
-<div id="outline-container-orgc5d5dd0" class="outline-3">
-<h3 id="orgc5d5dd0"><span class="section-number-3">1.1</span> Abrindo a conexão</h3>
+<div id="outline-container-orgf64ccd5" class="outline-3">
+<h3 id="orgf64ccd5"><span class="section-number-3">1.1</span> Abrindo a conexão</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Antes de acessar os dados em um banco de dados MySQL, você precisa se conectar ao servidor:
@@ -300,8 +297,8 @@ echo "Conexão realizada com sucesso!";
 </div>
 </div>
 
-<div id="outline-container-org53875fb" class="outline-3">
-<h3 id="org53875fb"><span class="section-number-3">1.2</span> Fechar a conexão</h3>
+<div id="outline-container-orgc91d834" class="outline-3">
+<h3 id="orgc91d834"><span class="section-number-3">1.2</span> Fechar a conexão</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Quando o script termina a conexão com o banco de dados é fechada automaticamente. Mas podemos fechá-la antes:
@@ -313,8 +310,8 @@ mysqli_close($conexao);
 </div>
 </div>
 
-<div id="outline-container-orgc677e65" class="outline-3">
-<h3 id="orgc677e65"><span class="section-number-3">1.3</span> Exercício 1</h3>
+<div id="outline-container-orgcf354a6" class="outline-3">
+<h3 id="orgcf354a6"><span class="section-number-3">1.3</span> Exercício 1</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Crie uma página php chamada (teste.php) que verifica se a conexão com o servidor de banco de dados está sendo feita corretamente.
@@ -322,8 +319,8 @@ Crie uma página php chamada (teste.php) que verifica se a conexão com o servidor
 </div>
 </div>
 
-<div id="outline-container-orgee21835" class="outline-3">
-<h3 id="orgee21835"><span class="section-number-3">1.4</span> Criando banco de dados MySQL</h3>
+<div id="outline-container-orgc5886cd" class="outline-3">
+<h3 id="orgc5886cd"><span class="section-number-3">1.4</span> Criando banco de dados MySQL</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Um banco de dados é composto de várias tabelas.
@@ -378,8 +375,8 @@ mysqli_close($conexao);
 </div>
 </div>
 
-<div id="outline-container-org31e1f43" class="outline-3">
-<h3 id="org31e1f43"><span class="section-number-3">1.5</span> Exercício 2</h3>
+<div id="outline-container-org95eb959" class="outline-3">
+<h3 id="org95eb959"><span class="section-number-3">1.5</span> Exercício 2</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Escreva uma página em php (cria.php) que cria um banco de dados chamado: bdLoja.
@@ -387,8 +384,8 @@ Escreva uma página em php (cria.php) que cria um banco de dados chamado: bdLoja.
 </div>
 </div>
 
-<div id="outline-container-org478d2fa" class="outline-3">
-<h3 id="org478d2fa"><span class="section-number-3">1.6</span> Criando tabelas</h3>
+<div id="outline-container-org6325285" class="outline-3">
+<h3 id="org6325285"><span class="section-number-3">1.6</span> Criando tabelas</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 Uma tabela de banco de dados possui dados dispostos em linhas e colunas.
@@ -453,7 +450,7 @@ A tabela poderia armazenar os seguintes dados:
 </table>
 
 <p>
-O campo id "id INT(6) UNSIGNED AUTO<sub>INCREMENT</sub> PRIMARY KEY" armazenará valores inteiros, começando em 1, os valores não serão fornecidos, o próximo valor será gerado automaticamente (AUTO<sub>INCREMENT</sub>).
+O campo id "id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY" armazenará valores inteiros, começando em 1, os valores não serão fornecidos, o próximo valor será gerado automaticamente (AUTO_INCREMENT).
 </p>
 
 <p>
@@ -505,8 +502,8 @@ mysqli_close($conexao);
 </div>
 </div>
 
-<div id="outline-container-orgd932e81" class="outline-3">
-<h3 id="orgd932e81"><span class="section-number-3">1.7</span> Exercício 3</h3>
+<div id="outline-container-orgeaa61e8" class="outline-3">
+<h3 id="orgeaa61e8"><span class="section-number-3">1.7</span> Exercício 3</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Escreva uma página php que cria a tabela <b>clientes</b> no banco <b>bdLoja</b>. A tabela deve poder armazenar os dados:
@@ -560,7 +557,7 @@ Escreva uma página php que cria a tabela <b>clientes</b> no banco <b>bdLoja</b>.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2019-09-23 seg 19:05</p>
+<p class="date">Created: 2019-09-23 seg 20:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
